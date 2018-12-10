@@ -24,7 +24,7 @@ sudo apt install abcde flac imagemagick glyrc cdparanoia
 sudo apt -q install at
 sudo apt -q install python3 python3-pip
 sudo apt-get -q install libcurl4-openssl-dev libssl-dev
-sudo apt-get -q install libdvd-pkg
+sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 sudo apt install default-jre-headless
 
