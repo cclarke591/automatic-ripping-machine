@@ -26,7 +26,7 @@ sudo apt -q install python3 python3-pip
 sudo apt-get -q install libcurl4-openssl-dev libssl-dev
 sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
-sudo apt install default-jre-headless
+sudo apt -q install default-jre-headless
 
 #installation
 cd /opt
