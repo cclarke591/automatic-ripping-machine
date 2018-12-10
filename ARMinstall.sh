@@ -7,24 +7,24 @@ sudo passwd arm
 sudo add-apt-repository ppa:heyarje/makemkv-beta
 sudo add-apt-repository ppa:stebbins/handbrake-releases
 sudo add-apt-repository ppa:mc3man/bionic-prop
-sudo apt-get update
+sudo apt-get -q update
 
-sudo apt-get install build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev zlib1g-dev
+sudo apt-get -q install build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev zlib1g-dev
 
 #install makemkv
-sudo apt install makemkv-bin makemkv-oss
+sudo apt -q install makemkv-bin makemkv-oss
 
 #install handbrake
-sudo apt install handbrake-cli libavcodec-extra
+sudo apt -q install handbrake-cli libavcodec-extra
 
 #install cd ripping stuff
 sudo apt install abcde flac imagemagick glyrc cdparanoia
 
 #dependancies
-sudo apt install at
-sudo apt install python3 python3-pip
-sudo apt-get install libcurl4-openssl-dev libssl-dev
-sudo apt-get install libdvd-pkg
+sudo apt -q install at
+sudo apt -q install python3 python3-pip
+sudo apt-get -q install libcurl4-openssl-dev libssl-dev
+sudo apt-get -q install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 sudo apt install default-jre-headless
 
