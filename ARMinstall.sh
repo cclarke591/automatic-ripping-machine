@@ -43,3 +43,6 @@ sudo ln -s /opt/arm/setup/.abcde.conf /home/arm/
 cp docs/arm.yaml.sample arm.yaml
 sudo mkdir /etc/arm/
 sudo ln -s /opt/arm/arm.yaml /etc/arm/
+
+#create mounting directory
+sudo mkdir -p /mnt/dev/sr0
