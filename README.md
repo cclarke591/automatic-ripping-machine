@@ -127,7 +127,7 @@ sudo chmod 775 arm
 sudo git clone https://github.com/automatic-ripping-machine/automatic-ripping-machine.git arm
 cd arm
 # TODO: Remove below line before merging to master
-sudo git checkout v2_master
+# sudo git checkout v2_master
 sudo pip3 install -r requirements.txt 
 sudo ln -s /opt/arm/setup/51-automedia.rules /lib/udev/rules.d/
 sudo ln -s /opt/arm/setup/.abcde.conf /home/arm/
