@@ -79,6 +79,31 @@ sudo add-apt-repository ppa:stebbins/handbrake-releases
 For Ubuntu 16.04 `sudo add-apt-repository ppa:mc3man/xerus-media`  
 For Ubuntu 18.04 `sudo add-apt-repository ppa:mc3man/bionic-prop`  
 
+The Installing will fail for dependancies.
+
+I solved this by adding this to /etc/apt/sources.list
+
+```bash
+deb http://archive.ubuntu.com/ubuntu bionic universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu bionic universe multiverse
+
+deb http://us.archive.ubuntu.com/ubuntu/ bionic universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ bionic universe
+deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ bionic-updates universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ bionic multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ bionic multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+
+deb http://security.ubuntu.com/ubuntu bionic-security universe
+deb-src http://security.ubuntu.com/ubuntu bionic-security universe
+deb http://security.ubuntu.com/ubuntu bionic-security multiverse
+deb-src http://security.ubuntu.com/ubuntu bionic-security multiverse
+```
+Now the rest can be installed
+
 ```bash
 sudo apt update
 sudo apt install makemkv-bin makemkv-oss
