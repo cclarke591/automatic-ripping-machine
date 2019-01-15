@@ -106,15 +106,20 @@ Now the rest can be installed
 
 ```bash
 sudo apt update
-sudo apt install makemkv-bin makemkv-oss
-sudo apt install handbrake-cli libavcodec-extra
-sudo apt install abcde flac imagemagick glyrc cdparanoia
+sudo apt install makemkv-bin makemkv-oss -y
+sudo apt install handbrake-cli libavcodec-extra -y
+sudo apt install abcde flac imagemagick glyrc cdparanoia -y
+```
+
+On the Configuration screen that pops up, choose no configuration (For simple install).
+
+```
 sudo apt install at
-sudo apt install python3 python3-pip
-sudo apt-get install libcurl4-openssl-dev libssl-dev
-sudo apt-get install libdvd-pkg
+sudo apt install python3 python3-pip -y
+sudo apt-get install libcurl4-openssl-dev libssl-dev -y
+sudo apt-get install libdvd-pkg -y
 sudo dpkg-reconfigure libdvd-pkg
-sudo apt install default-jre-headless
+sudo apt install default-jre-headless -y
 ```
 
 **Install and setup ARM**
