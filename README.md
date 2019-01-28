@@ -128,7 +128,7 @@ sudo apt install default-jre-headless -y
 
 **Install CCExtractor (Required for MakeMKV1.14.1 and Later)**
 
-`
+```bash
 git clone https://github.com/CCExtractor/ccextractor
 cd ccextractor/linux
 ./autogen.sh
@@ -137,7 +137,7 @@ sudo make
 sudo make install
 cd /usr/bin/
 sudo ln -s /usr/local/bin/ccextractor mmccextr
-`
+```
 
 **Install and setup ARM**
 
