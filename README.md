@@ -81,7 +81,7 @@ sudo add-apt-repository ppa:stebbins/handbrake-releases
 For Ubuntu 16.04 `sudo add-apt-repository ppa:mc3man/xerus-media`  
 For Ubuntu 18.04 `sudo add-apt-repository ppa:mc3man/bionic-prop`  
 
-Dependancies:
+Dependancies (Add these to your /etc/apt/sources.list via your favorite text editor):
 
 ```bash
 deb http://archive.ubuntu.com/ubuntu bionic universe multiverse
