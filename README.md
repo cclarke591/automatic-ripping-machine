@@ -107,6 +107,10 @@ Installation
 ```bash
 sudo apt update
 sudo apt install makemkv-bin makemkv-oss -y
+sudo apt install gcc
+sudo apt install libcurl4-gnutls-dev
+sudo apt install libtesseract-dev
+sudo apt install pkg-config
 sudo apt install handbrake-cli libavcodec-extra -y
 sudo apt install abcde flac imagemagick glyrc cdparanoia -y
 ```
@@ -121,6 +125,19 @@ sudo apt-get install libdvd-pkg -y
 sudo dpkg-reconfigure libdvd-pkg
 sudo apt install default-jre-headless -y
 ```
+
+**Install CCExtractor (Required for MakeMKV1.14.1 and Later)**
+
+`
+git clone https://github.com/CCExtractor/ccextractor
+cd ccextractor/linux
+./autogen.sh
+./configure
+sudo make
+sudo make install
+cd /usr/bin/
+sudo ln -s /usr/local/bin/ccextractor mmccextr
+`
 
 **Install and setup ARM**
 
