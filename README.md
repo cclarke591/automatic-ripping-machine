@@ -71,6 +71,8 @@ sudo passwd arm
 
 **Set up repos and install dependencies**
 
+Repos:
+
 ```bash
 sudo apt-get install git
 sudo add-apt-repository ppa:heyarje/makemkv-beta
@@ -79,9 +81,7 @@ sudo add-apt-repository ppa:stebbins/handbrake-releases
 For Ubuntu 16.04 `sudo add-apt-repository ppa:mc3man/xerus-media`  
 For Ubuntu 18.04 `sudo add-apt-repository ppa:mc3man/bionic-prop`  
 
-The Installing will fail for dependancies.
-
-I solved this by adding this to /etc/apt/sources.list
+Dependancies:
 
 ```bash
 deb http://archive.ubuntu.com/ubuntu bionic universe multiverse
@@ -102,7 +102,7 @@ deb-src http://security.ubuntu.com/ubuntu bionic-security universe
 deb http://security.ubuntu.com/ubuntu bionic-security multiverse
 deb-src http://security.ubuntu.com/ubuntu bionic-security multiverse
 ```
-Now the rest can be installed
+Installation
 
 ```bash
 sudo apt update
