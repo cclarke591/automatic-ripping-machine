@@ -52,7 +52,7 @@ MEDIA_DIR: "/home/arm/media/movies/"
 # For Plex see https://support.plex.tv/hc/en-us/articles/200220677
 EXTRAS_SUB: "extras"
 
-# Path to installation of ARM 
+# Path to installation of ARM
 INSTALLPATH: "/opt/arm/"
 
 # Path to directory to hold log files
@@ -76,8 +76,8 @@ LOGLIFE: 1
 SET_MEDIA_PERMISSIONS: false
 CHMOD_VALUE: 777
 SET_MEDIA_OWNER: false
-CHOWN_USER: 
-CHOWN_GROUP: 
+CHOWN_USER:
+CHOWN_GROUP:
 
 ########################
 ## MakeMKV Parameters ##
@@ -85,10 +85,10 @@ CHOWN_GROUP:
 
 # Method of MakeMKV to use for Blu Ray discs.  Options are "mkv" or "backup".
 # backup decrypts the dvd and then copies it to the hard drive.  This allows HandBrake to apply some of it's
-# analytical abilities such as the main-feature identification.  This method seems to offer success on bluray 
+# analytical abilities such as the main-feature identification.  This method seems to offer success on bluray
 # discs that fail in "mkv" mode. *** NOTE: MakeMKV only supports the backup method on BluRay discs.  ARM does
-# not use MakeMKV for DVDs.   
-RIPMETHOD: "backup" 
+# not use MakeMKV for DVDs.
+RIPMETHOD: "backup"
 
 # MakeMKV Arguments
 # MakeMKV Profile used for controlling Audio Track Selection.
@@ -101,8 +101,8 @@ MKV_ARGS: ""
 DELRAWFILES: true
 
 # Automatically download hashed_keys.  This is for UHD ripping only.  You mush have a UHD friendly drive for this to work.
-# Check out this post: https://www.makemkv.com/forum2/viewtopic.php?f=12&t=16883&sid=93f1db30f6ceb99b494f3f37cd723841 before 
-# changing this to True 
+# Check out this post: https://www.makemkv.com/forum2/viewtopic.php?f=12&t=16883&sid=93f1db30f6ceb99b494f3f37cd723841 before
+# changing this to True
 HASHEDKEYS: False
 
 ##########################
@@ -111,27 +111,27 @@ HASHEDKEYS: False
 
 # Handbrake preset profile for DVDs
 # Execute "HandBrakeCLI -z" to see a list of all presets
-HB_PRESET_DVD: "High Profile" 
+HB_PRESET_DVD: "High Profile"
 
 # Handbrake preset profile for Blurays
 # Execute "HandBrakeCLI -z" to see a list of all presets
-HB_PRESET_BD: "High Profile" 
+HB_PRESET_BD: "Fast 1080p30"
 
 # Extension of the final video file
-DEST_EXT: mkv
+DEST_EXT: mp4
 
 # Handbrake binary to call
 HANDBRAKE_CLI: HandBrakeCLI
 
 # Have HandBrake transcode the main feature only.  BluRay discs must have RIPMETHOD="backup" for this to work.
 # If MAINFEATURE is true, blurays will be backed up to the HD and then HandBrake will go to work on the backed up
-# files.  
+# files.
 # This will require libdvdcss2 be installed.
-# NOTE: For the most part, HandBrake correctly identifies the main feature on movie DVD's, although it is not perfect. 
+# NOTE: For the most part, HandBrake correctly identifies the main feature on movie DVD's, although it is not perfect.
 # However, it does not handle tv shows well at all.  This setting is only used when the video is identified as a movie.
 MAINFEATURE: false
 
-# Additional HandBrake arguments for DVDs.  
+# Additional HandBrake arguments for DVDs.
 HB_ARGS_DVD: "--subtitle scan -F"
 
 # Additional Handbrake arguments for Bluray Discs.
@@ -164,12 +164,12 @@ EMBY_USERNAME: ""
 EMBY_USERID: ""
 
 # This is the SHA1 encrypted password for the username above.  You can generate the SHA1 hash of your password by executing the following at
-# the command line: 
+# the command line:
 # echo -n your-password | sha1sum | awk '{print $1}'
 # or using an online generator like the one located at http://www.sha1-online.com/
 EMBY_PASSWORD: ""
 
-# Emby API key.  This can be found (generated) by going to Advanced/Security in the 
+# Emby API key.  This can be found (generated) by going to Advanced/Security in the
 # Emby dashboard
 EMBY_API_KEY: ""
 
@@ -205,4 +205,3 @@ PO_APP_KEY: ""
 # This is the API key for omdbapi.com queries.
 # More info at http://omdbapi.com/
 OMDB_API_KEY: ""
-

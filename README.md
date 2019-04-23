@@ -65,7 +65,7 @@ sudo regionset /dev/sr0
 ```bash
 sudo groupadd arm
 sudo useradd -m arm -g arm -G cdrom
-sudo passwd arm 
+sudo passwd arm
   <enter new password>
 ```
 
@@ -89,16 +89,19 @@ deb-src http://archive.ubuntu.com/ubuntu bionic universe multiverse
 
 deb http://us.archive.ubuntu.com/ubuntu/ bionic universe
 deb-src http://us.archive.ubuntu.com/ubuntu/ bionic universe
+
 deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates universe
 deb-src http://us.archive.ubuntu.com/ubuntu/ bionic-updates universe
 
 deb http://us.archive.ubuntu.com/ubuntu/ bionic multiverse
 deb-src http://us.archive.ubuntu.com/ubuntu/ bionic multiverse
+
 deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
 deb-src http://us.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
 
 deb http://security.ubuntu.com/ubuntu bionic-security universe
 deb-src http://security.ubuntu.com/ubuntu bionic-security universe
+
 deb http://security.ubuntu.com/ubuntu bionic-security multiverse
 deb-src http://security.ubuntu.com/ubuntu bionic-security multiverse
 ```
@@ -150,7 +153,7 @@ sudo git clone https://github.com/automatic-ripping-machine/automatic-ripping-ma
 cd arm
 # TODO: Remove below line before merging to master
 # sudo git checkout v2_master
-sudo pip3 install -r requirements.txt 
+sudo pip3 install -r requirements.txt
 sudo ln -s /opt/arm/setup/51-automedia.rules /lib/udev/rules.d/
 sudo ln -s /opt/arm/setup/.abcde.conf /home/arm/
 sudo cp docs/arm.yaml.sample arm.yaml
@@ -187,7 +190,7 @@ sudo ln -s /opt/arm/arm.yaml /etc/arm/
 - For ARM to identify movie/tv titles register for an API key at OMDb API: http://www.omdbapi.com/apikey.aspx and set the OMDB_API_KEY parameter in the config file.
 
 After setup is complete reboot...
-    
+
     reboot
 
 Optionally if you want something more stable than master you can download the latest release from the releases page.
@@ -208,11 +211,11 @@ When a disc is inserted, udev rules should launch a script (scripts/arm_wrapper.
   ```
   - Empty.log should be in your logs directory as defined in your arm.yaml file.  If there is no empty.log file, or entries are not being entered when you eject the cdrom drive, then udev is not launching ARM correctly.  Check the instructions and make sure the symlink to 51-automedia.rules is set up right.  I've you've changed the link or the file contents you need to reload your udev rules with:
   ```
-  sudo udevadm control --reload_rules 
+  sudo udevadm control --reload_rules
   ```
 
-- Check ARM log files 
-  - The default location is /home/arm/logs/ (unless this is changed in your arm.yaml file) and is named after the dvd. These are very verbose.  You can filter them a little by piping the log through grep.  Something like 
+- Check ARM log files
+  - The default location is /home/arm/logs/ (unless this is changed in your arm.yaml file) and is named after the dvd. These are very verbose.  You can filter them a little by piping the log through grep.  Something like
   ```
   cat <logname> | grep ARM:
   ```  
